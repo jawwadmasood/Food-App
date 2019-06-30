@@ -20,6 +20,9 @@ import Resturant from '../Components/DashBoard/UserView/resturant';
 //Chat app
 import ChatApp from '../Components/Chat_App/ChatApp';
 
+// Loader
+import Loader from '../Helper/loader';
+
 // import { createBrowserHistory } from 'history';
 const BrowserHistory = require("history").createBrowserHistory
 const history = BrowserHistory()
@@ -37,6 +40,7 @@ class Routers extends Component {
         <Route path="/resturant" component={Resturant} />
         <Route path="/DashRest" component={DashBoardRestaurant} />
         <Route path="/LocationRest" component={LocationResturant} />
+        <Route path="/Loader" component={Loader} />
         {/* <Route path="/Chat" component={ChatApp} /> */}
       </Router>
     );

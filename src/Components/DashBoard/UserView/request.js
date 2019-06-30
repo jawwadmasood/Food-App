@@ -45,8 +45,8 @@ class Request extends React.Component {
     render() {
         const { classes } = this.props;
         const { value, myRequests, filteredArray} = this.state;
-        console.log('requset==>>', myRequests)
-        console.log('Filtered==>>', filteredArray)
+        // console.log('requset==>>', myRequests)
+        // console.log('Filtered==>>', filteredArray)
         return (
             <div className={classes.root}>
                 <AppBar position="static">

@@ -68,7 +68,7 @@ class Pending extends React.Component {
 
        db.ref("users/" + uid + "/myRequests").on("child_added", (data) => {
            let request_Data= data.val();
-            // console.log(request_Data)
+            console.log(request_Data)
             let array = []
             array.push(request_Data)
             console.log('array===>>>0', array)
@@ -89,27 +89,13 @@ class Pending extends React.Component {
 
     render() {
         const { data} = this.state;
-        console.log('Data==>>', data.name)
+        console.log('Data==>>', data.status)
         return (
             // <div>
                  <MaterialTable
                     title="Pending Orders"
                     columns={this.state.columns}
                     data={data}
-                    // actions={[
-                    //     {
-                    //         icon: 'more',
-                    //         tooltip: 'Detail',
-                    //         onClick: (event, rowData) => {
-                    //             // console.log(event)
-                    //             localStorage.setItem('restUid', JSON.stringify(rowData.uid))
-                    //             //   localStorage.setItem('restUid', rowData.uid)
-                    //             this.props.history.push("/DetailUserScreen")
-                    //             // console.log(rowData)
-                    //             console.log(rowData.uid)
-                    //         }
-                    //     }
-                    // ]}
                     />
                /* <table  style={{ marginTop: "20px", margin: "0px auto" }}>
                         <thead>

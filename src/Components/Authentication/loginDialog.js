@@ -52,6 +52,8 @@ class Login extends Component {
     // try {
     //   await
     this.setState({ loading: true })
+    // this.state.loading &&
+    // this.props.history.push("/Loader")
     auth.signInWithEmailAndPassword(data.email, data.password)
 
       .then((success) => {
@@ -75,13 +77,13 @@ class Login extends Component {
             // array.forEach((v) => {
             //   console.log(v.email)
             this.setState({ loading: true })
-            // if (UserData.category === "user") {
-            //   this.props.history.push("/LocationUser")
-            // } else {
-            //   this.props.history.push("/LocationRest")
-            // }
+            if (UserData.category === "user") {
+              this.props.history.push("/LocationUser")
+            } else {
+              this.props.history.push("/LocationRest")
+            }
 
-            // this.props.store_user(UserData)
+            this.props.store_user(UserData)
             alert('Successfully Login!')
           })
         }
@@ -92,6 +94,7 @@ class Login extends Component {
       })
       .catch((error) => {
         alert(error)
+        this.props.history.push("/")
       })
   }
 

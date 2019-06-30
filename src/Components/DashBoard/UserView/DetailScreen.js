@@ -161,10 +161,10 @@ class UserDetailScreen extends React.Component {
         let userId = firebase.auth().currentUser.uid
         // console.log(userId)
         let resID_key = firebase.database().ref("users/" + resId + "/allRequests").push().key;
-        // console.log('restId_Key====<>>>>', resID_key)
+        console.log('restId_Key====<>>>>', resID_key)
 
         let userID_key = db.ref("users/" + userId + "/myRequests").push().key;
-        // console.log('userId_Key====<>>>>', userID_key)
+        console.log('userId_Key====<>>>>', userID_key)
 
         let restObj = {
             name: data[0].name,

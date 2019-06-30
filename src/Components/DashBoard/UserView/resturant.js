@@ -47,7 +47,7 @@ class Resturant extends React.Component {
         db.ref('users/').on('value', (user_data) => {
             // console.log(user_data)
             var UserData = user_data.val();
-            // console.log(UserData)
+            console.log(UserData)
             // var objData=Object.entries(user_data.val())
             // // console.log('Object====>>', objData)
             let array = []
